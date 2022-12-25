@@ -14,7 +14,21 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="$FLUTTER_BASE_HREF">
+<!--  <base href="$FLUTTER_BASE_HREF">-->
+
+  <style>
+    .container {
+      width: 100w;
+      height: 100h;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .indicator{
+      width: 50vw;
+    }
+  </style>
+
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -40,6 +54,24 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+
+<div id= "loading_indicator" class= "container">
+  <img class= "indicator" src="./assets/loading1.gif"/>
+</div>
+
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      var loadingIndicator =
+      document.getElementById("loading_indicator");
+      if (loading Indicator) {
+        loadingIndicator.remove();
+      }
+    }, 3000);
+  };
+</script>
+
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
